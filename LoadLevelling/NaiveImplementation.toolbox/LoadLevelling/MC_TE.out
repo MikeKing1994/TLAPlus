@@ -1,0 +1,260 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 124 and seed -2482536422412306010 with 2 workers on 4 cores with 604MB heap and 1355MB offheap memory [pid: 11560] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file C:\Users\micha\Documents\Github\TLAPlus\LoadLevelling\NaiveImplementation.toolbox\LoadLevelling\MC.tla
+Parsing file C:\Users\micha\Documents\Github\TLAPlus\LoadLevelling\NaiveImplementation.toolbox\LoadLevelling\LoadLevellingCache.tla
+Parsing file C:\Users\micha\Documents\Github\TLAPlus\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\TLC.tla
+Parsing file C:\Users\micha\Documents\Github\TLAPlus\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Integers.tla
+Parsing file C:\Users\micha\Documents\Github\TLAPlus\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Naturals.tla
+Parsing file C:\Users\micha\Documents\Github\TLAPlus\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Sequences.tla
+Parsing file C:\Users\micha\Documents\Github\TLAPlus\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module Integers
+Semantic processing of module LoadLevellingCache
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2023-02-11 21:32:38)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 2 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 4 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 8 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 16 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 32 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 64 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 128 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 256 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 512 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 1024 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 2048 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 4096 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 8192 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 16384 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2269:0 @!@!@
+Computed 32768 initial states...
+@!@!@ENDMSG 2269 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 40000 distinct states generated at 2023-02-11 21:32:40.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant NoOverdrafts is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ acct = [alice |-> 1, bob |-> 1]
+/\ amnt = <<1, 1>>
+/\ to = <<"alice", "alice">>
+/\ from = <<"alice", "alice">>
+/\ pc = <<"Check", "Check">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Check line 55, col 16 to line 59, col 54 of module LoadLevellingCache>
+/\ acct = [alice |-> 1, bob |-> 1]
+/\ amnt = <<1, 1>>
+/\ to = <<"alice", "alice">>
+/\ from = <<"alice", "alice">>
+/\ pc = <<"Check", "Withdraw">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Check line 55, col 16 to line 59, col 54 of module LoadLevellingCache>
+/\ acct = [alice |-> 1, bob |-> 1]
+/\ amnt = <<1, 1>>
+/\ to = <<"alice", "alice">>
+/\ from = <<"alice", "alice">>
+/\ pc = <<"Withdraw", "Withdraw">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <Withdraw line 61, col 19 to line 64, col 51 of module LoadLevellingCache>
+/\ acct = [alice |-> 0, bob |-> 1]
+/\ amnt = <<1, 1>>
+/\ to = <<"alice", "alice">>
+/\ from = <<"alice", "alice">>
+/\ pc = <<"Deposit", "Withdraw">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <Withdraw line 61, col 19 to line 64, col 51 of module LoadLevellingCache>
+/\ acct = [alice |-> -1, bob |-> 1]
+/\ amnt = <<1, 1>>
+/\ to = <<"alice", "alice">>
+/\ from = <<"alice", "alice">>
+/\ pc = <<"Deposit", "Deposit">>
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2023-02-11 21:32:43
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 47, col 1 to line 47, col 4 of module LoadLevellingCache>: 80000:80000
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 48, col 12 to line 48, col 37 of module LoadLevellingCache: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 50, col 12 to line 50, col 45 of module LoadLevellingCache: 200
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 12 to line 51, col 47 of module LoadLevellingCache: 5000
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 52, col 12 to line 52, col 45 of module LoadLevellingCache: 20000
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 53, col 12 to line 53, col 46 of module LoadLevellingCache: 80000
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Check line 55, col 1 to line 55, col 11 of module LoadLevellingCache>: 156379:224005
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 19 to line 55, col 36 of module LoadLevellingCache: 672025
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 55, col 19 to line 55, col 26 of module LoadLevellingCache: 448020
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 56, col 22 to line 56, col 51 of module LoadLevellingCache: 224005
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 57, col 27 to line 57, col 67 of module LoadLevellingCache: 173605
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 58, col 27 to line 58, col 63 of module LoadLevellingCache: 50400
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 59, col 19 to line 59, col 54 of module LoadLevellingCache: 224005
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Withdraw line 61, col 1 to line 61, col 14 of module LoadLevellingCache>: 100423:128005
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 61, col 22 to line 61, col 42 of module LoadLevellingCache: 576021
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 61, col 22 to line 61, col 29 of module LoadLevellingCache: 448018
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 62, col 22 to line 62, col 88 of module LoadLevellingCache: 128003
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 62, col 30 to line 62, col 88 of module LoadLevellingCache: 128005
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 63, col 22 to line 63, col 58 of module LoadLevellingCache: 128003
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 63, col 28 to line 63, col 58 of module LoadLevellingCache: 128005
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 64, col 22 to line 64, col 51 of module LoadLevellingCache: 128003
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Deposit line 66, col 1 to line 66, col 13 of module LoadLevellingCache>: 59204:64006
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 66, col 21 to line 66, col 40 of module LoadLevellingCache: 512020
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 66, col 21 to line 66, col 28 of module LoadLevellingCache: 448014
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 67, col 21 to line 67, col 83 of module LoadLevellingCache: 64006
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 68, col 21 to line 68, col 54 of module LoadLevellingCache: 64006
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 69, col 21 to line 69, col 50 of module LoadLevellingCache: 64006
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<Terminating line 74, col 1 to line 74, col 11 of module LoadLevellingCache>: 0:3200
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 74, col 40 to line 74, col 56 of module LoadLevellingCache: 246407
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 74, col 40 to line 74, col 47 of module LoadLevellingCache: 240007
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 74, col 31 to line 74, col 37 of module LoadLevellingCache: 224005
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 75, col 19 to line 75, col 32 of module LoadLevellingCache: 3200
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<NoOverdrafts line 37, col 1 to line 37, col 12 of module LoadLevellingCache>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 38, col 3 to line 39, col 16 of module LoadLevellingCache: 356006
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 39, col 5 to line 39, col 16 of module LoadLevellingCache: 712010
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 38, col 12 to line 38, col 17 of module LoadLevellingCache: 356006
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(5) at 2023-02-11 21:32:43: 459,210 states generated (5,447,330 s/min), 356,006 distinct states found (4,223,084 ds/min), 131,997 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+459210 states generated, 356006 distinct states found, 131997 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 5.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 5127ms at (2023-02-11 21:32:43)
+@!@!@ENDMSG 2186 @!@!@

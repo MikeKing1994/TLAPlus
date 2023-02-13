@@ -1,0 +1,102 @@
+---- MODULE LoadLevellingCache ----
+EXTENDS TLC, Integers
+
+(* --algorithm LoadLevellingCache
+variables 
+State = "Ready";
+GsCalls = 0;
+CacheCount = 0;
+IterationLimit = 100;
+ActionCount = 0;
+
+begin
+    Iterate:
+        while ActionCount <= 100 do
+            if State = "Ready" then
+                State := "ReadingCache";
+                ActionCount := ActionCount + 1;
+                
+            elsif State = "ReadingCache" /\ CacheCount < 5 then
+                State := "WritingCache";
+                ActionCount := ActionCount + 1;
+                
+            elsif State = "ReadingCache" /\ CacheCount >= 5 then 
+                State := "Ready";
+                ActionCount := ActionCount + 1;
+                
+            elsif State = "WritingCache" then 
+                State := "CallingGs";
+                CacheCount := CacheCount + 1;
+                ActionCount := ActionCount + 1;
+                
+            elsif State = "CallingGs" then
+                State := "Ready";
+                GsCalls := GsCalls + 1;
+                ActionCount := ActionCount + 1;
+            else
+                State := "Ready";
+            end if;
+        end while;
+        
+            
+
+end algorithm; *)
+\* BEGIN TRANSLATION (chksum(pcal) = "36d43725" /\ chksum(tla) = "5d33515b")
+VARIABLES State, GsCalls, CacheCount, IterationLimit, ActionCount, pc
+
+vars == << State, GsCalls, CacheCount, IterationLimit, ActionCount, pc >>
+
+Init == (* Global variables *)
+        /\ State = "Ready"
+        /\ GsCalls = 0
+        /\ CacheCount = 0
+        /\ IterationLimit = 100
+        /\ ActionCount = 0
+        /\ pc = "Iterate"
+
+Iterate == /\ pc = "Iterate"
+           /\ IF ActionCount <= 100
+                 THEN /\ IF State = "Ready"
+                            THEN /\ State' = "ReadingCache"
+                                 /\ ActionCount' = ActionCount + 1
+                                 /\ UNCHANGED << GsCalls, CacheCount >>
+                            ELSE /\ IF State = "ReadingCache" /\ CacheCount < 5
+                                       THEN /\ State' = "WritingCache"
+                                            /\ ActionCount' = ActionCount + 1
+                                            /\ UNCHANGED << GsCalls, 
+                                                            CacheCount >>
+                                       ELSE /\ IF State = "ReadingCache" /\ CacheCount >= 5
+                                                  THEN /\ State' = "Ready"
+                                                       /\ ActionCount' = ActionCount + 1
+                                                       /\ UNCHANGED << GsCalls, 
+                                                                       CacheCount >>
+                                                  ELSE /\ IF State = "WritingCache"
+                                                             THEN /\ State' = "CallingGs"
+                                                                  /\ CacheCount' = CacheCount + 1
+                                                                  /\ ActionCount' = ActionCount + 1
+                                                                  /\ UNCHANGED GsCalls
+                                                             ELSE /\ IF State = "CallingGs"
+                                                                        THEN /\ State' = "Ready"
+                                                                             /\ GsCalls' = GsCalls + 1
+                                                                             /\ ActionCount' = ActionCount + 1
+                                                                        ELSE /\ State' = "Ready"
+                                                                             /\ UNCHANGED << GsCalls, 
+                                                                                             ActionCount >>
+                                                                  /\ UNCHANGED CacheCount
+                      /\ pc' = "Iterate"
+                 ELSE /\ pc' = "Done"
+                      /\ UNCHANGED << State, GsCalls, CacheCount, ActionCount >>
+           /\ UNCHANGED IterationLimit
+
+(* Allow infinite stuttering to prevent deadlock on termination. *)
+Terminating == pc = "Done" /\ UNCHANGED vars
+
+Next == Iterate
+           \/ Terminating
+
+Spec == Init /\ [][Next]_vars
+
+Termination == <>(pc = "Done")
+
+\* END TRANSLATION 
+====

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.lamport.tla.toolbox.tool.tlc.modelCheck">
+    <stringAttribute key="configurationName" value="LoadLevelling_SnapShot_1676151164946"/>
+    <intAttribute key="distributedFPSetCount" value="0"/>
+    <stringAttribute key="distributedNetworkInterface" value="192.168.0.23"/>
+    <intAttribute key="distributedNodesCount" value="1"/>
+    <stringAttribute key="distributedTLC" value="off"/>
+    <intAttribute key="fpIndex" value="124"/>
+    <intAttribute key="maxHeapSize" value="25"/>
+    <stringAttribute key="modelBehaviorInit" value="Temporal Formula"/>
+    <stringAttribute key="modelBehaviorNext" value="Spec"/>
+    <stringAttribute key="modelBehaviorSpec" value="Spec"/>
+    <intAttribute key="modelBehaviorSpecType" value="1"/>
+    <stringAttribute key="modelBehaviorVars" value="acct, amnt, to, from, pc"/>
+    <stringAttribute key="modelComments" value=""/>
+    <booleanAttribute key="modelCorrectnessCheckDeadlock" value="true"/>
+    <listAttribute key="modelCorrectnessInvariants">
+        <listEntry value="1NoOverdrafts"/>
+    </listAttribute>
+    <listAttribute key="modelCorrectnessProperties"/>
+    <intAttribute key="modelEditorOpenTabs" value="10"/>
+    <stringAttribute key="modelExpressionEval" value=""/>
+    <stringAttribute key="modelParameterActionConstraint" value=""/>
+    <listAttribute key="modelParameterConstants"/>
+    <stringAttribute key="modelParameterContraint" value=""/>
+    <listAttribute key="modelParameterDefinitions"/>
+    <stringAttribute key="modelParameterModelValues" value="{}"/>
+    <stringAttribute key="modelParameterNewDefinitions" value=""/>
+    <intAttribute key="modelVersion" value="20191005"/>
+    <intAttribute key="numberOfWorkers" value="2"/>
+    <stringAttribute key="result.mail.address" value=""/>
+    <stringAttribute key="specName" value="NaiveImplementation"/>
+    <stringAttribute key="tlcResourcesProfile" value="local custom"/>
+</launchConfiguration>
